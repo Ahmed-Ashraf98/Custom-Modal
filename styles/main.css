@@ -1,0 +1,121 @@
+@font-face {
+  font-family: Rubik;
+  src: url("../fonts/Rubik/static/Rubik-Light.ttf");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: Rubik;
+  src: url("../fonts/Rubik/static/Rubik-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Rubik;
+  src: url("../fonts/Rubik/static/Rubik-Medium.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Rubik;
+  src: url("../fonts/Rubik/static/Rubik-Bold.ttf");
+  font-weight: 700;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Rubik, sans-serif;
+  /* background-repeat: no-repeat; */
+  background: linear-gradient(
+    326deg,
+    rgba(18, 48, 174, 1) 3%,
+    rgba(136, 94, 207, 1) 45%,
+    rgba(198, 143, 230, 1) 86%
+  );
+}
+
+main {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  & button {
+    margin: 0 10px;
+    padding: 10px;
+    font-family: Rubik;
+    border-radius: 12px;
+    background-color: #fff7f7;
+    border-color: #c68fe6;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.modal-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+}
+
+.modal {
+  position: absolute;
+  z-index: 22;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 12px;
+  line-height: 1.5;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  background-color: #fff7f7;
+  width: 50%;
+  padding: 10px 20px;
+  margin: 0 auto;
+  & .modal-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+.close-modal {
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  border: 2px solid #885ecf;
+  padding: 10px;
+  border-radius: 12px;
+  font-weight: bold;
+  display: block;
+  margin-left: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(12, 12, 12, 0.4);
+  backdrop-filter: blur(1px);
+}
